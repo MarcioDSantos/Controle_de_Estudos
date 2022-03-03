@@ -7,7 +7,11 @@ class Forms extends Component{ //A classe Forms esta extendendo atributos do Rea
 
         name: '',
         sobrenome: '',
-        linguagem: 'Java'
+        email: '',
+        tipo: 'backend',
+        linguagem: 'HTML',
+        profissao: 'Estudante',
+        bio:''
     } 
     
     handleSumit = (b) =>{
@@ -16,12 +20,13 @@ class Forms extends Component{ //A classe Forms esta extendendo atributos do Rea
 
         let {name} = this.state
         name = name
-        console.log('Nome:', name)
 
         let {sobrenome} = this.state
         sobrenome = sobrenome
 
-        console.log('Sobrenome:', sobrenome)
+        let {email} = this.state
+                email = email
+
     }
 
     handleInputChange(property) {
@@ -34,8 +39,20 @@ class Forms extends Component{ //A classe Forms esta extendendo atributos do Rea
       }
 
     changeSelect = (event)=>{
-        this.setState({linguagem: event.target.value})
+        this.setState({profissao: event.target.value})
     }
+
+    changeRadio=(event)=>{
+        this.setState({tipo: event.target.value})
+    }
+
+    changeCheckBox=(event)=>{
+            this.setState({linguagem: event.target.checked})
+        }
+
+    changeBio=(event)=>{
+                this.setState({bio: event.target.value})
+            }
 
     render(){
 
@@ -43,27 +60,63 @@ class Forms extends Component{ //A classe Forms esta extendendo atributos do Rea
             <section>
                 <form onSubmit={this.handleSumit}>
                     <label>
-                        nome: {''}
+                        Nome: <b/>
                         <input onChange={this.handleInputChange('name')} type='text' placeholder='Nome'/>
                     </label>
+
                     <label>
-                    {''} {''} {''}
-                        sobrenome: {''}
+                    <b/> <b/>
+                        Sobrenome: <b/>
                         <input onChange={this.handleInputChange('sobrenome')} type='text' placeholder='Sobrenome'/>
                     </label>
-                    <br />
-                    <br />
+                     <br/><br/>
+
                     <label>
-                        Linguagem Favorita
-                        <select value={this.state.linguagem} onChange={this.changeSelect}>
-                            <option>Java</option>
-                            <option>JavaScript</option>
-                            <option>Python</option>
-                            <option>C++</option>
+                        Email: <b/>
+                        <input onChange={this.handleInputChange('email')} type='text' placeholder='Email'/>
+                    </label>
+                     <br/><br/>
+
+                    <label>
+                        Em qual area você deseja se aprofundar ?
+                        <br/>
+                        <input type='radio' checked={this.state.tipo=="backend"} onChange={this.changeRadio} value='backend' /> Back-end
+                        <input type='radio' checked={this.state.tipo=="frontend"} onChange={this.changeRadio} value='frontend' /> Front-end
+                        <input type='radio' checked={this.state.tipo=="fullstack"} onChange={this.changeRadio} value='fullstack' /> Fullstack
+                    </label>
+                    <br/><br/>
+
+                    <label>
+                        Selecione as tecnologias que deseja estudar:
+                        <br/>
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> HTML
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> CSS
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> JavaScript
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> C#
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> Java
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> PHP
+                        <input type='checkbox' checked={this.state.tipo.linguagem} onChange={this.changeCheckBox} /> Python
+
+                    </label>
+                     <br/><br/>
+
+                    <label>
+                        Profissão: <b/>
+                        <select value={this.state.profissao} onChange={this.changeSelect}>
+                            <option>Estudante</option>
+                            <option>Junior</option>
+                            <option>Pleno</option>
+                            <option>Senior</option>
                         </select>
                     </label>
-                    <br />
-                    <br />
+                    <br/><br/>
+
+                    <label>
+                        Fala sobre sua experiência na área:
+                        <br/>
+                        <textarea cols='100' value={this.state.bio} onChange={this.changeBio} />
+                    </label>
+                       <br/><br/>
                     <button type = 'submit'>Enviar</button>
                 </form>
             </section>
