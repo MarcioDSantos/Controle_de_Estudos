@@ -118,6 +118,7 @@ class Forms extends Component{ //A classe Forms esta extendendo atributos do Rea
                     </label>
                        <br/><br/>
                     <button type = 'submit'>Enviar</button>
+                     <img class="rodape-imagem-calendario" src="assets/calendario.png" alt="Logo da página" width="100">
                 </form>
             </section>
         )
