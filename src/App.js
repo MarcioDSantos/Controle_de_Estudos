@@ -1,6 +1,9 @@
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Forms from './Forms';
+
+
 
 function App() {
   return (
@@ -11,5 +14,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
