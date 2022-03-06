@@ -1,8 +1,8 @@
-FormsPage{
+.FormsPage{
     text-align: center;
 }
 
-.AboutHeader{
+.FormsHeader{
     background-color: #FFF;
     min-height: 100vh;
     display: flex;
