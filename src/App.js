@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Forms from './Forms';
-
+import Home from './components/home/home';
+import About from './components/about/about';
+import Contact from './components/contact/contact';
+import Forms from './components/forms/forms';
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Cadastro de DEVs</h1>
-
+    <>
+      <Home />
+      <About />
+      <Contact />
       <Forms />
-    </div>
+    </>
   );
 }
 

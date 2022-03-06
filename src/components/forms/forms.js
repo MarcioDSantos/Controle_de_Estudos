@@ -1,4 +1,4 @@
-// Primeira coisa que deve ser feita é a importacao do React
+
 import React, { Component } from "react";
 
 class Forms extends Component{ //A classe Forms esta extendendo atributos do React
@@ -57,7 +57,7 @@ class Forms extends Component{ //A classe Forms esta extendendo atributos do Rea
     render(){
 
         return(
-            <section>
+            <section className="FormsPage">
                 <form onSubmit={this.handleSumit}>
                     <label>
                         Nome: <b/>
