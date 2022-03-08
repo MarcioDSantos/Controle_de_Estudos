@@ -1,4 +1,4 @@
-import Prog from '../assets/programador.png'
+import Prog from '../assets/programming.png'
 import './login.css'
 
 function Login(){

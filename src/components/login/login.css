@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -39,19 +41,22 @@
 }
 
 .login-form-title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
     display: block;
     font-size: 30px;
     color: azure;
 
     line-height: 1.2;
     text-align: center;
+    padding: 10px;
 }
 
 .login-form-title img{
     width: 90px;
 }
 
-.wrap-input{
+.wrap_input{
     width: 100%;
     position: relative;
     border-bottom: 2px solid #adadad;
@@ -74,6 +79,8 @@
 }
 
 .focus-input{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     position: absolute;
     display: block;
     width: 100%;
@@ -86,7 +93,7 @@
     color: #adadad;
 }
 
-.focus-input ::before{
+.focus-input::before{
     content: "";
     display: block;
     position: absolute;
@@ -95,17 +102,19 @@
     width: 0;
     height: 2px;
 
+
+    /* Os transitions que fazem a movimentação suave dentro do input */
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
 
-    background-color: -webkit-linear-gradient(to left #21d4fd #b721ff);
-    background-color: -o-linear-gradient(to left #21d4fd #b721ff);
-    background-color: -moz-linear-gradient(to left #21d4fd #b721ff);
-    background-color: linear-gradient(to left #21d4fd #b721ff);
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
-.focus-input ::after{
+.focus-input::after{
     font-size: 15px;
     color: #999;
     line-height: 1.2;
@@ -129,4 +138,44 @@
 
 .input:focus{
     outline: 0;
+}
+
+.input:focus + .focus-input::after{
+    top: -15px;
+}
+
+.input:focus + .focus-input::before{
+    width: 100%;
+}
+
+
+
+.container-login-form-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 13px;
+}
+
+.login-form-btn{
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
 }
