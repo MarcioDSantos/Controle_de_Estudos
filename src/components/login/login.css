@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -148,7 +149,13 @@
     width: 100%;
 }
 
+.has-val + .focus-input::after{
+    top: -15px;
+}
 
+.has-val + .focus-input::before{
+    width: 100%;
+}
 
 .container-login-form-btn{
     display: flex;
@@ -165,6 +172,8 @@
 
     line-height: 1.2;
 
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
 
     display: flex;
@@ -178,4 +187,35 @@
     background: -o-linear-gradient(to left, #21d4fd, #b721ff);
     background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
     background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.login-form-btn:hover{
+    cursor: pointer;
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.txt1{
+    font-size: 14px;
+    color: #adadad;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.txt2{
+    font-size: 14px;
+    color: #6a7dfe;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    text-decoration: none;
 }
