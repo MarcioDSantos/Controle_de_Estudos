@@ -10,7 +10,7 @@ import Login from './components/login/login';
 function Main() {
   return (
     <>
-      <Login />
+      <Home />
       {/* <About />
       <Contact />
       <Forms /> */}

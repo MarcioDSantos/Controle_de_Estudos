@@ -1,5 +1,19 @@
 import React, {Component} from 'react';
 import './home.css';
+import programador from '../assets/programador.png'
+import calendario from '../assets/calendario.png'
+import checkList from '../assets/checkList.png'
+import email from '../assets/email.png'
+import cronometro from '../assets/cronometro.png'
+import php from '../assets/php.png'
+import java from '../assets/java.png'
+import javascript from '../assets/javascript.png'
+import python from '../assets/python.png'
+import react from '../assets/react.png'
+import css3 from '../assets/css3.png'
+import csharp from '../assets/csharp.png'
+import html5 from '../assets/html5.png'
+import c from '../assets/c.png'
 
 function Home() {
   return (
@@ -14,7 +28,7 @@ function Home() {
             </header>
             <body>
                 <header className="cabecalho">
-                    <img className="cabecalho-imagem" src='assets/done' alt="Logo da página" />
+                    <img className="cabecalho-imagem" src={programador} alt="Logo da página" />
                     <nav className="cabecalho-menu">
                         <a className="cabecalho-menu-item">Linguagens de Programação</a>
                         <a className="cabecalho-menu-item">Tutorial</a>
@@ -45,29 +59,29 @@ function Home() {
             
                     <section className="painel-icones">
                         <div className="icones">
-                            <img className="conteudo-principal-imagem" src="assets/java.png" width="100px" height="100px" />
-                            <img className="conteudo-principal-imagem" src="assets/javascript.png" width="100px" height="100px" />
-                            <img className="conteudo-principal-imagem" src="assets/php.png" width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={java} width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={javascript} width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={php} width="100px" height="100px" />
                         </div>
             
                         <div className="icones1">
-                            <img className="conteudo-principal-imagem" src="assets/python.png" width="100px" height="100px" />
-                            <img className="conteudo-principal-imagem" src="assets/html5.png" width="100px" height="100px" />
-                            <img className="conteudo-principal-imagem" src="assets/css3.png" width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={python} width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={html5} width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={css3} width="100px" height="100px" />
                         </div>
                         <div className="icones2">
-                            <img className="conteudo-principal-imagem" src="assets/react.png" width="100px" height="100px" />
-                            <img className="conteudo-principal-imagem" src="assets/c.png" width="100px" height="100px" />
-                            <img className="conteudo-principal-imagem" src="assets/csharp.png" width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={react} width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={c} width="100px" height="100px" />
+                            <img className="conteudo-principal-imagem" src={csharp} width="100px" height="100px" />
                         </div>
                     </section>
                 </main>
             
                 <footer className="rodape">
-                    <img className="rodape-imagem-calendario" src="assets/calendario.png" alt="Logo da página" />
-                    <img className="rodape-imagem-checkList"  src="assets/checkList.png" alt="Logo da página" />
-                    <img className="rodape-imagem-cronometro"  src="assets/cronometro.png" alt="Logo da página" />
-                    <img className="rodape-imagem-email"  src="assets/email.png" alt="Logo da página" />
+                    <img className="rodape-imagem-calendario" src={calendario} alt="Logo da página" />
+                    <img className="rodape-imagem-checkList"  src={checkList} alt="Logo da página" />
+                    <img className="rodape-imagem-cronometro"  src={cronometro} alt="Logo da página" />
+                    <img className="rodape-imagem-email"  src={email} alt="Logo da página" />
                 </footer>
             </body>
         </html>
