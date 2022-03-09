@@ -27,6 +27,7 @@ body{
 
 .cabecalho-imagem{
     height: 72px;
+    color: transparent;
 }
 
 .cabecalho-imagem:hover{
