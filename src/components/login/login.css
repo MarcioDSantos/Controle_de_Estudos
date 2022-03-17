@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
 
+/*Reset do CSS para definição de viewport*/
 *{
     margin: 0;
     padding: 0;
@@ -16,18 +17,18 @@
     width: 100%;
     min-height: 100vh;
 
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
-    padding: 15px;
+
 
     background-color: #111;
 }
 
 .wrap-login{
-    width: 390px;
+    width: 600px;
     background-color: #333;
     border-radius: 10px;
 
@@ -35,10 +36,24 @@
     padding: 77px 55px 33px 55px;
 
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
 }
 
 .login-form{
     width: 100%;
+    display: flex;
+}
+
+.firstContent{
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    
+}
+
+.secondContent{
+    width: 300px;
 }
 
 .login-form-title{
@@ -54,7 +69,10 @@
 }
 
 .login-form-title img{
-    width: 90px;
+    width: 95px;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .wrap_input{
