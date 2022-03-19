@@ -20,7 +20,10 @@ function Login(){
                             </span>
                         </div>
 
-                        <div className="secondContent">    
+                        <div className="secondContent">
+                            <span className="login-options">
+                                Faça o seu login:
+                            </span>
                             <div className='wrap_input'>
                             <input className={email !== "" ? 'has-val input' : 'input'} 
                                     type="email" 
