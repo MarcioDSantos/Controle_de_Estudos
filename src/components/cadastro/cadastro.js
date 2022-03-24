@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Prog from '../assets/programming.png'
-import './Cadastro.css'
+import './cadastro.css'
 
 function Cadastro(){
-    const [email, setEmail] = useState("")
+    const [nome, setNome] = useState("")
     const [password, setPassword] = useState("")
 
     return(
@@ -13,7 +13,7 @@ function Cadastro(){
                     <form className="login-form">
                         <div className="firstContent"> 
                             <span className="login-form-title">
-                                Bem Vindo Dev!
+                                Venha ser um Dev!
                             </span>
                             <span className="login-form-title">
                                 <img src={Prog} alt="Programador"></img>
@@ -22,15 +22,18 @@ function Cadastro(){
 
                         <div className="secondContent">
                             <span className="login-options">
-                                Faça o seu login:
+                                Crie uma conta:
+                            </span>
+                            <span className="login-With-email">
+                                ou utilize seu e-mail para registro:
                             </span>
                             <div className='wrap_input'>
-                            <input className={email !== "" ? 'has-val input' : 'input'} 
-                                    type="email" 
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}
+                            <input className={nome !== "" ? 'has-val input' : 'input'} 
+                                    type="Nome" 
+                                    value={nome}
+                                    onChange={e => setNome(e.target.value)}
                             />
-                            <span className='focus-input' data-placeholder='E-mail'></span>
+                            <span className='focus-input' data-placeholder='Nome'></span>
                             </div>
                         
 
