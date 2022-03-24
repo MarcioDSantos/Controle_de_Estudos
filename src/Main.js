@@ -5,12 +5,13 @@ import About from './components/about/about';
 import Contact from './components/contact/contact';
 import Forms from './components/forms/forms';
 import Login from './components/login/login';
+import Cadastro from './components/cadastro/cadastro';
 
 
 function Main() {
   return (
     <>
-      <Login />
+      <Cadastro />
       {/* <About />
       <Contact />
       <Forms /> */}
