@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import Prog from '../assets/programming.png'
 import './cadastro.css'
+import { FaBeer } from 'react-icons/fa'
+import { render } from '@testing-library/react';
 
 function Cadastro(){
     const [nome, setNome] = useState("")
     const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("")
+    const [confirm, setConfirm] = useState("")
 
     return(
         <div className="container">
@@ -13,7 +17,7 @@ function Cadastro(){
                     <form className="login-form">
                         <div className="firstContent"> 
                             <span className="login-form-title">
-                                Venha ser um Dev!
+                                Venha ser um Dev com a gente!
                             </span>
                             <span className="login-form-title">
                                 <img src={Prog} alt="Programador"></img>
@@ -36,25 +40,42 @@ function Cadastro(){
                             <span className='focus-input' data-placeholder='Nome'></span>
                             </div>
                         
+                            <div className='wrap_input'>
+                            <input className={email !== "" ? 'has-val input' : 'input'} 
+                                    type="E-mail" 
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                            />
+                            <span className='focus-input' data-placeholder='E-mail'></span>
+                            </div>
 
                             <div className='wrap_input'>
                             <input className={password !== "" ? 'has-val input' : 'input'}  
-                                    type="password"
+                                    type="Password"
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                             />
                             <span className='focus-input' data-placeholder='PassWord'></span>
                             </div>
+
+                            <div className='wrap_input'>
+                            <input className={confirm !== "" ? 'has-val input' : 'input'}  
+                                    type="Confirma password"
+                                    value={confirm}
+                                    onChange={e => setConfirm(e.target.value)}
+                            />
+                            <span className='focus-input' data-placeholder='Confirm password'></span>
+                            </div>
                                 
                             <div className='container-login-form-btn'>
-                                <button className='login-form-btn'>Login</button>
+                                <button className='login-form-btn'>Cadastrar</button>
                             </div>
                         
 
                             <div className='text-center'>
-                                <span className='txt1'>Esqueceu a sua senha?</span>
+                                <span className='txt1'>Já é cadastrado?</span>
 
-                                <a className='txt2' href='#'>Recurperar senha</a>
+                                <a className='txt2' href='#'>Faça o Login</a>
                             </div>
                         </div>
 
