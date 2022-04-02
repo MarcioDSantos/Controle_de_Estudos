@@ -270,3 +270,14 @@
     line-height: 1.5;
     text-decoration: none;
 }
+
+.icons{
+    display: flex;
+    color:#fff;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100vmin;
+}

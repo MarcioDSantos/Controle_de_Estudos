@@ -3,6 +3,8 @@ import Prog from '../assets/programming.png'
 import './cadastro.css'
 import { FaBeer } from 'react-icons/fa'
 import { render } from '@testing-library/react';
+import {BsFacebook} from 'react-icons/bs'
+import {AiOutlineGooglePlus} from 'react-icons/ai'
 
 function Cadastro(){
     const [nome, setNome] = useState("")
@@ -29,8 +31,12 @@ function Cadastro(){
                                 Crie uma conta:
                             </span>
                             <span className="login-With-email">
-                                ou utilize seu e-mail para registro:
+                                ou utilize a rede para registro:
                             </span>
+                            <div className="icons">
+                                <BsFacebook/>
+                                <AiOutlineGooglePlus/>
+                            </div>
                             <div className='wrap_input'>
                             <input className={nome !== "" ? 'has-val input' : 'input'} 
                                     type="Nome" 
